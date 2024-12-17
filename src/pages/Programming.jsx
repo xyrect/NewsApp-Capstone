@@ -13,7 +13,7 @@ const Home = () => {
   const defaultImage = "https://via.placeholder.com/300x200?text=No+Image+Available";
 
   
-  const fetchTopStories = async (category = "home") => {
+  const fetchTopStories = async (category = "technology") => {
     try {
       const { data } = await axios.get(
         `https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=${apiKey}`
@@ -45,8 +45,8 @@ const Home = () => {
   return (
     <div className="container mt-4">
       <PageHeader
-        title="Welcome to NewsSphere"
-        subtitle="All the news you need, all in one place"
+        title="Programming News"
+        subtitle="All news about programming"
       />
 
       <LineSeparator />
